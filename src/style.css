@@ -2,5 +2,5 @@
 
 .merged-cell{vertical-align:middle}.merged-cell input{white-space:normal;line-height:1.7}
 
-/* Table text editors wrap long descriptions instead of clipping them horizontally. */
-td:has(.cell-editor){height:auto;min-height:52px}.cell-editor{display:block;width:100%;min-width:0;min-height:38px;padding:6px;border:1px solid transparent;border-radius:4px;background:transparent;color:inherit;font:inherit;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word;resize:vertical;overflow:hidden}.cell-editor:hover,.cell-editor:focus{background:#fff;border-color:#8ab4e8;outline:0}.merged-cell .cell-editor{height:auto;min-height:0;field-sizing:content;resize:none}
+/* Table text editors wrap long descriptions; the box fills the cell and the text inside it is vertically centered. */
+td:has(.cell-box){height:1px}.cell-box{display:flex;flex-direction:column;justify-content:center;height:100%;min-height:38px;padding:6px;border:1px solid transparent;border-radius:4px;cursor:text}.cell-box:hover,.cell-box:focus-within{background:#fff;border-color:#8ab4e8}.cell-editor{display:block;width:100%;min-width:0;min-height:0;padding:0;border:0;outline:0;background:transparent;color:inherit;font:inherit;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word;resize:none;overflow:hidden;field-sizing:content}
